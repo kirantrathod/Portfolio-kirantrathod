@@ -1,38 +1,117 @@
+body {
+  /* background-color: #f9ebe0; */
+  background-color: #cdedf6;
+}
 .App {
   text-align: center;
+  width: 100vw;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navigation {
+  border-radius: 0 0 0 40px;
+  /* background-image: linear-gradient(
+    to left,
+    rgba(65, 182, 220, 1),
+    rgba(65, 182, 220, 0)
+  ); */
+  background-color: #3a8592;
+  width: inherit;
+  height: 3.5rem;
+  margin: auto;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.intro-header {
+  font-size: 1.5rem;
+  font-family: "Castoro", serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.undraw-profile {
+  width: 25rem;
+  height: 29rem;
+}
+.nav-container {
+  height: inherit;
+  width: inherit;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.nav-container p {
   color: white;
+  padding: 0.625rem;
+  margin: 0;
+  /* flex-grow: 2; */
+  padding: 1.2rem;
+  font-weight: 400;
+  font-size: 1.2rem;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* mobile devices */
+@media only screen and (min-width: 0px) and (max-width: 480px) {
+  .navigation {
+    border-radius: 0 0 0 2.5rem;
+    /* background-image: linear-gradient(
+      to left,
+      rgba(65, 182, 220, 1),
+      rgba(65, 182, 220, 0)
+    ); */
+    background-color: #469faf;
+    width: inherit;
+    height: 3rem;
+    margin: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .undraw-profile {
+    width: 21rem;
+    height: 25rem;
+  }
+  .nav-container p {
+    padding: 0.625rem;
+    margin: 0;
+    /* padding: 1.2rem; */
+    font-weight: 400;
+    font-size: 1.2rem;
   }
 }
+/* ipads and tablets */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .navigation {
+    border-radius: 0 0 0 2.5rem;
+
+    width: inherit;
+    height: 3rem;
+    margin: auto;
+  }
+  .undraw-profile {
+    width: 19rem;
+    height: 25rem;
+  }
+}
+/* small screen laptops */
+@media only screen and (min-width: 1025px) and (max-width: 1201px) {
+  .navigation {
+    border-radius: 0 0 0 2.5rem;
+
+    width: inherit;
+    height: 3rem;
+    margin: auto;
+  }
+  .undraw-profile {
+    width: 19rem;
+    height: 25rem;
+  }
+}
+/* large screen desktop */
+/* @media only screen and (min-width: 1201px) {
+  .navigation {
+    border-radius: 0 0 0 2.5rem;
+    background-image: linear-gradient(
+      to right,
+      rgba(65, 182, 220, 1),
+      rgba(65, 182, 220, 0)
+    );
+    width: inherit;
+    height: 3rem;
+    margin: auto;
+  }
+  .undraw-profile {
+    width: 19rem;
+    height: 25rem;
+  }
+} */
