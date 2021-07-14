@@ -1,5 +1,6 @@
 import React from "react";
 // import ProfileUndraw from "../../assets/undraw_Coding.svg";
+import ProjectUndraw from "../../assets/undraw_Code_typing.svg";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import Particles from "react-particles-js";
 import "./Home.css";
@@ -57,19 +58,21 @@ function Home() {
       <section className="intro-section">
         <div className="particles-container">
           <Particles
-            height="100%"
-            color="black"
             params={{
               particles: {
-                number: {
-                  value: 80,
-                  density: {
-                    enable: true,
-                    value_area: 800,
+                color: {
+                  value: "#000000",
+                },
+                line_linked: {
+                  color: {
+                    value: "#000000",
                   },
                 },
+                number: {
+                  value: 60,
+                },
                 size: {
-                  value: 5,
+                  value: 4,
                 },
               },
               interactivity: {
@@ -89,6 +92,16 @@ function Home() {
           alt="profile_undraw"
         ></img> */}
         <p className="intro-header">Hey! I am Kiran Rathod.</p>
+      </section>
+      <section className="project-banner">
+        <div className="project-banner-container">
+          <p id="project-banner-header">Projects</p>
+          <img
+            className="undrawProject"
+            src={ProjectUndraw}
+            alt="Project Banner"
+          ></img>
+        </div>
       </section>
       <section>
         <div className="project-wrapper">
