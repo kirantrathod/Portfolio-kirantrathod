@@ -1,20 +1,25 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
+import Particles from "react-particles-js";
 import "./App.css";
 import Resume from "./assets/KiranRathod'CV.pdf";
-import ProjectUndraw from "./assets/undraw_Code_typing.svg";
+import ProjectUndraw from "./assets/undraw_Project.svg";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
-import Particles from "react-particles-js";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  NavLink,
-} from "react-router-dom";
-import Projects from "./components/Projects/Project";
-// import Blogs from "./components/Blogs/Blog";
-import Home from "./components/Home/Home";
-
+import { useState, useEffect } from "react";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FiSun, FiMoon } from "react-icons/fi";
 function App() {
+  //Dark Mode Code
+  var storedDarkMode = localStorage.getItem("DARK_MODE");
+  // storedDarkMode = storedDarkMode ? storedDarkMode : false;
+  console.log("Stored darkmode: " + storedDarkMode);
+  const [darkMode, setDarkMode] = useState(storedDarkMode);
+  const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
+  useEffect(() => {
+    localStorage.setItem("DARK_MODE", darkMode);
+    console.log(`Is in dark mode? ${darkMode}`);
+  }, [darkMode]);
+
   let projectsList = [
     {
       header: "BeYou",
@@ -64,55 +69,71 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <div>
-        <nav className="navigation">
-          <div className="brandname">
-            <strong>&lt;kirantrathod/&gt;</strong>
-          </div>
-          <div className="nav-container">
-            <a className="nav-link" href="#">
-              Home
+    <div className="App" data-theme={darkMode ? "dark" : "light"}>
+      <nav className="navigation">
+        <div className="brandname">
+          <strong>
+            <a className="brandname-anchor" href="#">
+              &lt;kirantrathod/&gt;
             </a>
-            <a className="nav-link" href="#project">
-              Projects
-            </a>
-            <a className="nav-link" href="https://blog.kirantrathod.in/">
-              Blogs
-            </a>
-            <a className="nav-link" href={Resume}>
-              Resume
-            </a>
-            {/* <NavLink activeClassName="nav-active" className="nav-link">
-                Projects
-              </NavLink>
-              <NavLink
-                activeClassName="nav-active"
-                className="nav-link"
-                href=""
-              >
-                Blogs
-              </NavLink>
-              <a className="nav-link" href={Resume}>
-                Resume
-              </a> */}
-          </div>
-        </nav>
+          </strong>
+          <button className="darkmode-toggle-Btn" onClick={toggleDarkMode}>
+            {darkMode ? (
+              <FiSun title="Enable light mode" className="sun-icon" />
+            ) : (
+              <FiMoon title="Enable dark mode" className="moon-icon" />
+            )}
+          </button>
+        </div>
+        <div className="nav-container">
+          <a className="nav-link" href="#">
+            Home
+          </a>
+          <a className="nav-link" href="#project">
+            Projects
+          </a>
+          <a className="nav-link" href="https://blog.kirantrathod.in/">
+            Blogs
+          </a>
+          <a className="nav-link" href={Resume}>
+            Resume
+          </a>
+        </div>
+      </nav>
 
-        {/* <Switch>
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/blogs">
-              <Blogs />
-            </Route>
-            <Route path="">
-              <Home />
-            </Route>
-          </Switch> */}
-
-        <section className="intro-section">
-          <div className="particles-container">
+      <section className="intro-section">
+        <div className="particles-container">
+          {darkMode && (
+            <Particles
+              params={{
+                particles: {
+                  color: {
+                    value: "#ffffff",
+                  },
+                  line_linked: {
+                    color: {
+                      value: "#ffffff",
+                    },
+                  },
+                  number: {
+                    value: 60,
+                  },
+                  size: {
+                    value: 4,
+                  },
+                },
+                interactivity: {
+                  events: {
+                    onhover: {
+                      enable: true,
+                      mode: "repulse",
+                    },
+                  },
+                },
+              }}
+            ></Particles>
+          )}
+          {!darkMode && (
             <Particles
               params={{
                 particles: {
@@ -141,39 +162,43 @@ function App() {
                 },
               }}
             ></Particles>
+          )}
+        </div>
+        <p className="intro-header">
+          Hello World!
+          <br /> I am Kiran Rathod.
+        </p>
+      </section>
+      <section className="project-banner" id="project">
+        <div className="project-banner-container">
+          <p id="project-banner-header">Projects</p>
+          <img
+            className="undrawProject"
+            src={ProjectUndraw}
+            alt="Project Banner"
+          ></img>
+        </div>
+        {/* <p id="project-arrow">&#10225;</p> */}
+      </section>
+      <section className="project-wrapper">
+        <div className="project-inner-wrapper">
+          <div className="project-container">
+            {projectsList.map(function (item) {
+              return (
+                <ProjectCard
+                  header={item.header}
+                  description={item.description}
+                  viewProjectLink={item.viewProjectLink}
+                  liveProjectLink={item.liveProjectLink}
+                  liveProjectLinkEnabled={item.liveProjectLinkEnabled}
+                  techStack={item.techStack}
+                  key={item.header}
+                ></ProjectCard>
+              );
+            })}
           </div>
-          <p className="intro-header">Hey! I am Kiran Rathod.</p>
-        </section>
-        <section className="project-banner" id="project">
-          <div className="project-banner-container">
-            <p id="project-banner-header">Projects</p>
-            <img
-              className="undrawProject"
-              src={ProjectUndraw}
-              alt="Project Banner"
-            ></img>
-          </div>
-        </section>
-        <section>
-          <div className="project-wrapper">
-            <div className="project-container">
-              {projectsList.map(function (item) {
-                return (
-                  <ProjectCard
-                    header={item.header}
-                    description={item.description}
-                    viewProjectLink={item.viewProjectLink}
-                    liveProjectLink={item.liveProjectLink}
-                    liveProjectLinkEnabled={item.liveProjectLinkEnabled}
-                    techStack={item.techStack}
-                    key={item.header}
-                  ></ProjectCard>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -1,30 +1,55 @@
+/* List of all variables which 
+will be applied if theme is "Dark" */
+[data-theme="dark"] {
+  --bg-color: #3f3f3f;
+  --navigation-box-shadow: 0 1px 4px rgb(167 158 158);
+  --text-color: #fff;
+}
+/* List of all variables 
+which will be applied if theme is "Light" */
+[data-theme="light"] {
+  --bg-color: #fff;
+  --text-color: #000;
+  --navigation-box-shadow: 0 1px 4px rgb(146 161 176 / 30%);
+}
+
+.App {
+  /* font-family: sans-serif; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
 * {
   box-sizing: border-box;
-}
-body {
-  /* background-color: #cdedf6; */
-  background-color: white;
-  overflow-x: hidden;
 }
 .brandname {
   left: 5px;
   font-size: 1.2rem;
-  color: black;
+  /* color: black; */
+  color: var(--text-color);
   top: 0.16rem;
   padding-top: 0.4rem;
   padding-bottom: 0.5rem;
 }
 
+.brandname .brandname-anchor {
+  /* color: black; */
+  color: var(--text-color);
+  text-decoration: none;
+}
+
 .navigation {
   /* border-bottom-left-radius: 3rem; */
-  background-color: white;
-  /* background-color: #41cff3; */
+  /* background-color: white; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
   width: inherit;
   margin: auto;
   padding: 0.5rem;
   z-index: 1000;
   position: sticky;
-  box-shadow: 0 1px 4px rgb(146 161 176 / 30%);
+  box-shadow: var(--navigation-box-shadow);
 }
 
 .nav-container {
@@ -34,7 +59,7 @@ body {
 }
 
 .nav-container .nav-link {
-  color: black;
+  color: var(--text-color);
   text-decoration: none;
   margin: 0;
   font-size: 1.1rem;
@@ -50,6 +75,40 @@ body {
   .nav-container .nav-link {
     padding: 0.519rem 0.5rem;
     margin: 0;
+  }
+  .project-banner .project-banner-container img.undrawProject {
+    width: 200px;
+    height: 200px;
+    padding-left: 0.5rem;
+  }
+  .project-banner .project-banner-container #project-banner-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 0.2rem;
+  }
+  .intro-section .intro-header {
+    font-size: 1.5rem;
+    padding-left: 40px;
+    line-height: 1.5;
+    position: absolute;
+    top: 0px;
+  }
+  .darkmode-toggle-Btn {
+    padding-right: 0.5rem;
+  }
+  .darkmode-toggle-Btn .moon-icon {
+    font-size: 1rem;
+    font-size: 1.5rem;
+    padding: 0rem;
+  }
+  .darkmode-toggle-Btn .sun-icon {
+    color: #fff;
+    padding: 0rem;
+    font-size: 1.5rem;
+  }
+  .particles-container {
+    height: 100%;
+    width: 375px;
   }
 }
 /* ipads and tablets */
@@ -79,24 +138,6 @@ body {
     height: 25rem;
   }
 }
-/* large screen desktop */
-/* @media only screen and (min-width: 1201px) {
-  .navigation {
-    border-radius: 0 0 0 2.5rem;
-    background-image: linear-gradient(
-      to right,
-      rgba(65, 182, 220, 1),
-      rgba(65, 182, 220, 0)
-    );
-    width: inherit;
-    height: 3rem;
-    margin: auto;
-  }
-  .undraw-profile {
-    width: 19rem;
-    height: 25rem;
-  }
-} */
 
 /* ======================Home.js */
 /*  {
@@ -105,51 +146,53 @@ body {
 .particles-container,
 .particles-container #tsparticles {
   position: relative;
-  /* top: 0;
-  left: 0; */
   height: 100%;
   width: 100%;
   text-align: center;
-  /* z-index: 0; */
 }
 
 .intro-section {
-  /* z-index: 10; */
-  /* text-align: center; */
   width: 100%;
   height: 700px;
-  background-color: rgb(240, 239, 239);
-  /* padding: 1rem 0; */
+  /* background-color: rgb(240, 239, 239); */
+  background-color: var(--bg-color);
 }
 .intro-header {
   font-size: 1.5rem;
   font-family: "Castoro", serif;
   margin-top: 230px;
-  padding-left: 30px;
+  padding-left: 50px;
+  line-height: 1.5;
   position: absolute;
   top: 0px;
+  color: var(--text-color);
 }
 .project-banner {
   width: 100%;
   height: auto;
   background-color: #b7e5f1;
+  /* background-color: var(--bg-color); */
 }
-.project-banner-container {
+.project-banner .project-banner-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
-.project-banner-container .undrawProject {
-  width: 500px;
+.project-banner .project-banner-container .undrawProject {
+  width: 380px;
   height: 250px;
+  padding-top: 0.6rem;
 }
-.project-banner-container #project-banner-header {
+.project-banner .project-banner-container #project-banner-header {
   font-size: 1.5rem;
   font-weight: 600;
   color: #6c63ff;
 }
 .project-wrapper {
+  /* background-color: grey; */
+}
+.project-inner-wrapper {
   display: flex;
   margin: 0;
   padding: 0;
@@ -169,33 +212,31 @@ body {
   margin-bottom: 0.2rem;
   /* border-radius: 15px; */
 }
-/* mobile devices */
-@media only screen and (min-width: 0px) and (max-width: 480px) {
-  .project-banner-container .undrawProject {
-    width: 250px;
-    height: 250px;
-  }
-  .project-banner-container #project-banner-header {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
 
-  .particles-container {
-    height: 100%;
-    width: 375px;
-  }
+.darkmode-toggle-Btn {
+  float: right;
+  /* font-size: 1.5rem; */
+  background-color: inherit;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  padding-right: 1.5rem;
 }
-/* ipads and tablets */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-  .undraw-profile {
-    width: 19rem;
-    height: 25rem;
-  }
+.moon-icon {
+  color: #000;
+  font-size: 2.2rem;
+  padding: 0.3rem;
 }
-/* small screen laptops */
-@media only screen and (min-width: 1025px) and (max-width: 1201px) {
-  .undraw-profile {
-    width: 19rem;
-    height: 25rem;
-  }
+.sun-icon {
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 0.3rem;
+}
+.moon-icon:hover {
+  border-radius: 50%;
+  background-color: rgb(235, 231, 231);
+}
+.sun-icon:hover {
+  border-radius: 50%;
+  background-color: rgb(102, 98, 98);
 }
