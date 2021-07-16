@@ -69,7 +69,9 @@ function App() {
       techStack: "Java, XML, Firebase",
     },
   ];
-
+  let hashURL = window.location.hash;
+  let isAtHome = hashURL === "" ? true : false;
+  let isAtProject = hashURL === "#project" ? true : false;
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <nav className="navigation">
@@ -88,10 +90,13 @@ function App() {
           </button>
         </div>
         <div className="nav-container">
-          <a className="nav-link" href="#">
+          <a className={isAtHome ? "nav-link nav-active" : "nav-link"} href="#">
             Home
           </a>
-          <a className="nav-link" href="#project">
+          <a
+            className={isAtProject ? "nav-link nav-active" : "nav-link"}
+            href="#project"
+          >
             Projects
           </a>
           <a className="nav-link" href="https://blog.kirantrathod.in/">
