@@ -10,9 +10,11 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FiSun, FiMoon } from "react-icons/fi";
 function App() {
   //Dark Mode Code
-  var storedDarkMode = localStorage.getItem("DARK_MODE");
+  let storedDarkMode = localStorage.getItem("DARK_MODE");
+  storedDarkMode =
+    storedDarkMode === null ? false : storedDarkMode === "false" ? false : true;
   // storedDarkMode = storedDarkMode ? storedDarkMode : false;
-  console.log("Stored darkmode: " + storedDarkMode);
+  console.log(" typeof Stored darkmode: " + typeof storedDarkMode);
   const [darkMode, setDarkMode] = useState(storedDarkMode);
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   useEffect(() => {
