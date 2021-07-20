@@ -124,6 +124,18 @@ which will be applied if theme is "Light" */
     height: 100%;
     width: 375px;
   }
+  .skill-wrapper .skill-header {
+    font-size: 1.3rem;
+    font-weight: 600;
+    /* color: var(--text-color); */
+    color: #040308;
+  }
+  .skill-wrapper .skill-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    /* color: var(--text-color); */
+    color: black;
+  }
 }
 /* ipads and tablets */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
@@ -180,10 +192,27 @@ which will be applied if theme is "Light" */
   top: 0px;
   color: var(--text-color);
 }
+.intro-header-resume {
+  font-size: 1.5rem;
+  margin-top: 530px;
+  padding-left: 50px;
+  line-height: 1.5;
+  position: absolute;
+  top: 0px;
+  color: var(--text-color);
+}
+/* .resume-para {
+  margin-top: ;
+} */
+.resume-anchor {
+  color: var(--text-color);
+}
+
 .skill-wrapper {
   width: 100%;
   height: auto;
-  background-color: #b7e5f1;
+  background-color: #6bcdeb;
+  line-height: 1;
   /* background-color: var(--bg-color); */
 }
 .skill-container {
@@ -196,7 +225,7 @@ which will be applied if theme is "Light" */
   font-size: 1.5rem;
   font-weight: 600;
   /* color: var(--text-color); */
-  color: #433aec;
+  color: #040308;
 }
 .skill-label {
   font-size: 1.1rem;
@@ -205,8 +234,9 @@ which will be applied if theme is "Light" */
   color: black;
 }
 .skill-subpoints {
-  padding: 0;
+  padding: 0 0.5rem;
   margin: 0;
+  color: black;
 }
 /* .project-banner .project-banner-container {
   display: flex;

@@ -9,6 +9,7 @@ import { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FiSun, FiMoon } from "react-icons/fi";
 import Emoji from "./components/Emojis/Emoji";
+import { FaGoogleDrive } from "react-icons/fa";
 function App() {
   //Dark Mode Code
   let storedDarkMode = localStorage.getItem("DARK_MODE");
@@ -72,7 +73,8 @@ function App() {
   ];
   let hashURL = window.location.hash;
   let isAtHome = hashURL === "" ? true : false;
-  let isAtProject = hashURL === "#project" ? true : false;
+  let isAtProject = hashURL === "#projects" ? true : false;
+  let isAtSkill = hashURL === "#skills" ? true : false;
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <nav className="navigation">
@@ -95,16 +97,19 @@ function App() {
             Home
           </a>
           <a
+            className={isAtSkill ? "nav-link nav-active" : "nav-link"}
+            href="#skills"
+          >
+            Skills
+          </a>
+          <a
             className={isAtProject ? "nav-link nav-active" : "nav-link"}
-            href="#project"
+            href="#projects"
           >
             Projects
           </a>
           <a className="nav-link" href="https://blog.kirantrathod.in/">
             Blogs
-          </a>
-          <a className="nav-link" href={Resume}>
-            Resume
           </a>
         </div>
       </nav>
@@ -175,9 +180,20 @@ function App() {
         <p className="intro-header">
           Hi there! <Emoji symbol="👋" label="Hello" />
           <br /> I am Kiran Rathod.
+          <br />
+          {/*I am Web Developer comes here */}
+        </p>
+        <p className="intro-header-resume">
+          Resume :-&nbsp;&nbsp;
+          <a
+            className="resume-anchor"
+            href="https://drive.google.com/file/d/1uY5zOKkTQEYJIO_Z_YgH-9Fshh3p_meh/view"
+          >
+            <FaGoogleDrive></FaGoogleDrive>
+          </a>
         </p>
       </section>
-      <section className="skill-wrapper" id="skill">
+      <section className="skill-wrapper" id="skills">
         <div className="skill-container">
           <h3 className="skill-header">Skills</h3>
           <p className="skill-subpoints">
@@ -187,7 +203,7 @@ function App() {
           <br />
           <p className="skill-subpoints">
             <label className="skill-label">
-              Frameworks & Others: &nbsp;&nbsp;
+              Frameworks/Others: &nbsp;&nbsp;
             </label>
             React.js, Angular 11, Spring Boot, Git
           </p>
@@ -204,7 +220,7 @@ function App() {
         </div> */}
         {/* <p id="project-arrow">&#10225;</p> */}
       </section>
-      <section className="project-wrapper" id="project">
+      <section className="project-wrapper" id="projects">
         <div className="project-banner-container">
           <p id="project-banner-header">Projects</p>
           <img
