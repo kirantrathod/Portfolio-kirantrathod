@@ -14,20 +14,21 @@
   color: black;
 }
 .card-container .card-description {
-  color: grey;
+  color: rgb(66, 65, 65);
   font-size: 1rem;
 }
 .card-container p.tech-stack {
   margin-top: 0;
+  color: rgb(180, 47, 147);
 }
 .btn {
   /* background-color: #413d7e; */
   background-color: black;
   color: whitesmoke;
-  padding: 0.7rem;
+  padding: 0.6rem;
   cursor: pointer;
   border: 0;
-  margin-right: 0.4rem;
+  margin-right: 0.3rem;
   border-radius: 10px;
   outline: none;
   text-decoration: none;

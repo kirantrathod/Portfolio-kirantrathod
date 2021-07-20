@@ -8,6 +8,7 @@ import ProjectCard from "./components/ProjectCard/ProjectCard";
 import { useState, useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FiSun, FiMoon } from "react-icons/fi";
+import Emoji from "./components/Emojis/Emoji";
 function App() {
   //Dark Mode Code
   let storedDarkMode = localStorage.getItem("DARK_MODE");
@@ -172,11 +173,38 @@ function App() {
           )}
         </div>
         <p className="intro-header">
-          Hello World!
+          Hi there! <Emoji symbol="👋" label="Hello" />
           <br /> I am Kiran Rathod.
         </p>
       </section>
-      <section className="project-banner" id="project">
+      <section className="skill-wrapper" id="skill">
+        <div className="skill-container">
+          <h3 className="skill-header">Skills</h3>
+          <p className="skill-subpoints">
+            <label className="skill-label">Languages: &nbsp;&nbsp;</label>HTML5,
+            CSS3, JavaScript, Java,
+          </p>
+          <br />
+          <p className="skill-subpoints">
+            <label className="skill-label">
+              Frameworks & Others: &nbsp;&nbsp;
+            </label>
+            React.js, Angular 11, Spring Boot, Git
+          </p>
+          <br />
+        </div>
+
+        {/* <div className="project-banner-container">
+          <p id="project-banner-header">Projects</p>
+          <img
+            className="undrawProject"
+            src={ProjectUndraw}
+            alt="Project Banner"
+          ></img>
+        </div> */}
+        {/* <p id="project-arrow">&#10225;</p> */}
+      </section>
+      <section className="project-wrapper" id="project">
         <div className="project-banner-container">
           <p id="project-banner-header">Projects</p>
           <img
@@ -185,9 +213,6 @@ function App() {
             alt="Project Banner"
           ></img>
         </div>
-        {/* <p id="project-arrow">&#10225;</p> */}
-      </section>
-      <section className="project-wrapper">
         <div className="project-inner-wrapper">
           <div className="project-container">
             {projectsList.map(function (item) {

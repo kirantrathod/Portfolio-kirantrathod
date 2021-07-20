@@ -37,6 +37,8 @@ which will be applied if theme is "Light" */
   /* color: black; */
   color: var(--text-color);
   text-decoration: none;
+  /* font-family: "Lato"; */
+  font-weight: 600;
 }
 
 .navigation {
@@ -86,6 +88,18 @@ which will be applied if theme is "Light" */
     font-weight: 600;
     padding-right: 0.2rem;
   }
+  /**/
+  .project-wrapper .project-banner-container img.undrawProject {
+    width: 200px;
+    height: 200px;
+    padding-left: 0.5rem;
+  }
+  .project-wrapper .project-banner-container #project-banner-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-right: 0.2rem;
+  }
+  /**/
   .intro-section .intro-header {
     font-size: 1.5rem;
     padding-left: 40px;
@@ -159,7 +173,6 @@ which will be applied if theme is "Light" */
 }
 .intro-header {
   font-size: 1.5rem;
-  font-family: "Castoro", serif;
   margin-top: 230px;
   padding-left: 50px;
   line-height: 1.5;
@@ -167,13 +180,35 @@ which will be applied if theme is "Light" */
   top: 0px;
   color: var(--text-color);
 }
-.project-banner {
+.skill-wrapper {
   width: 100%;
   height: auto;
   background-color: #b7e5f1;
   /* background-color: var(--bg-color); */
 }
-.project-banner .project-banner-container {
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.skill-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* color: var(--text-color); */
+  color: #433aec;
+}
+.skill-label {
+  font-size: 1.1rem;
+  font-weight: 600;
+  /* color: var(--text-color); */
+  color: black;
+}
+.skill-subpoints {
+  padding: 0;
+  margin: 0;
+}
+/* .project-banner .project-banner-container {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -188,7 +223,26 @@ which will be applied if theme is "Light" */
   font-size: 1.5rem;
   font-weight: 600;
   color: #6c63ff;
+} */
+/**/
+.project-wrapper .project-banner-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1rem;
 }
+.project-wrapper .project-banner-container .undrawProject {
+  width: 380px;
+  height: 250px;
+  padding-top: 0.6rem;
+}
+.project-wrapper .project-banner-container #project-banner-header {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+/**/
 .project-wrapper {
   /* background-color: grey; */
 }
