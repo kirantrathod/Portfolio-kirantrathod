@@ -110,7 +110,7 @@ which will be applied if theme is "Light" */
   /**/
   .intro-section .intro-header {
     font-size: 1.3rem;
-    padding-left: 40px;
+    padding-left: 30px;
     line-height: 1.5;
     position: absolute;
     top: 0px;
@@ -211,17 +211,30 @@ which will be applied if theme is "Light" */
 .intro-header {
   font-size: 1.5rem;
   margin-top: 230px;
-  padding-left: 50px;
+  padding-left: 40px;
   line-height: 1.5;
   position: absolute;
   top: 0px;
   color: var(--text-color);
 }
 .intro-header-resume-container {
-  margin-top: 530px;
-  padding-left: 50px;
+  margin-top: 340px;
+  margin-left: 20px;
+  width: 200px;
+  height: 50px;
   position: absolute;
   top: 0px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.intro-header-resume-container .social-media-icon {
+  font-size: 1.5rem;
+  border-radius: 50%;
+  /* padding: 5px; */
+  text-decoration: none;
+  color: var(--text-color);
 }
 .para-resume {
   font-size: 1.5rem;
@@ -391,4 +404,10 @@ which will be applied if theme is "Light" */
 }
 .download-resume .download-btn {
   font-size: 1.5rem;
+}
+.social-media-icons {
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

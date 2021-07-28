@@ -2,6 +2,7 @@
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { useEffect, useState } from "react";
 import { FaGoogleDrive } from "react-icons/fa";
+import { GrLinkedin, GrGithub, GrMail } from "react-icons/gr";
 import { FiMoon, FiSun, FiDownload } from "react-icons/fi";
 import Particles from "react-particles-js";
 import "./App.css";
@@ -209,7 +210,30 @@ function App() {
               );
             }}
           />
+          {/* <br /> */}
         </p>
+        <div className="intro-header-resume-container">
+          <a
+            className="social-media-icon"
+            href="https://www.linkedin.com/in/kirantrathod/"
+          >
+            {" "}
+            <GrLinkedin></GrLinkedin>
+          </a>
+          <a
+            className="social-media-icon"
+            href="https://github.com/kirantrathod"
+          >
+            {" "}
+            <GrGithub />
+          </a>
+          <a
+            className="social-media-icon"
+            href="mailto:kirantrathod.in@gmail.com"
+          >
+            <GrMail />
+          </a>
+        </div>
         {/* <div className="intro-header-resume-container">
           <p className="para-resume">
             Resume :-&nbsp;&nbsp;
