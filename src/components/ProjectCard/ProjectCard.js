@@ -10,7 +10,7 @@ function ProjectCard(props) {
         <a href={props.viewProjectLink}>
           <button className="btn">View Project</button>
         </a>
-        <a href={props.liveProjectLink} hidden={props.liveProjectLinkEnabled}>
+        <a href={props.liveProjectLink} hidden={!props.liveProjectLinkEnabled}>
           <button className="btn">Live Project</button>
         </a>
       </span>

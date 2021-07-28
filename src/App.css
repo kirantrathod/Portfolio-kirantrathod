@@ -1,9 +1,14 @@
 /* List of all variables which 
 will be applied if theme is "Dark" */
 [data-theme="dark"] {
-  --bg-color: #3f3f3f;
+  --bg-color: #4e4d4d;
   --navigation-box-shadow: 0 1px 4px rgb(167 158 158);
-  --text-color: #fff;
+  --text-color: #ffffff;
+  --footer-section-bg-color: #807d7d;
+  --skills-gradient-bg: linear-gradient(to bottom, #717272, #7bbcd4, #6bcdeb);
+  --resume-gradient-bg: linear-gradient(to top, #717272, #7bbcd4, #6bcdeb);
+  --resume-box-shadow: inset 0 1px 4px rgb(146 161 176 / 30%);
+  --resume-bg-color: #71a2b1;
 }
 /* List of all variables 
 which will be applied if theme is "Light" */
@@ -11,6 +16,9 @@ which will be applied if theme is "Light" */
   --bg-color: #fff;
   --text-color: #000;
   --navigation-box-shadow: 0 1px 4px rgb(146 161 176 / 30%);
+  --skills-gradient-bg: linear-gradient(to bottom, #ffffff, #90ddf5, #6bcdeb);
+  --resume-gradient-bg: linear-gradient(to top, #ffffff, #90ddf5, #6bcdeb);
+  --resume-box-shadow: inset 0 1px 4px rgb(146 161 176 / 30%);
 }
 
 .App {
@@ -38,7 +46,7 @@ which will be applied if theme is "Light" */
   color: var(--text-color);
   text-decoration: none;
   /* font-family: "Lato"; */
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .navigation {
@@ -64,12 +72,12 @@ which will be applied if theme is "Light" */
   color: var(--text-color);
   text-decoration: none;
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1rem;
   padding: 0.1rem 1.2rem;
 }
 .nav-container .nav-active {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-weight: 600;
+  font-size: 1.1rem;
 }
 
 /* mobile devices */
@@ -101,7 +109,7 @@ which will be applied if theme is "Light" */
   }
   /**/
   .intro-section .intro-header {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-left: 40px;
     line-height: 1.5;
     position: absolute;
@@ -135,6 +143,23 @@ which will be applied if theme is "Light" */
     font-weight: 600;
     /* color: var(--text-color); */
     color: black;
+  }
+  .footer-section .footer img {
+    width: 100%;
+  }
+  .footer .link-github {
+    font-size: 1.3rem;
+  }
+  .footer p {
+    font-size: 0.8rem;
+  }
+  .download-resume p {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0;
+  }
+  .download-resume .download-btn {
+    font-size: 1.4rem;
   }
 }
 /* ipads and tablets */
@@ -192,14 +217,19 @@ which will be applied if theme is "Light" */
   top: 0px;
   color: var(--text-color);
 }
-.intro-header-resume {
-  font-size: 1.5rem;
+.intro-header-resume-container {
   margin-top: 530px;
   padding-left: 50px;
-  line-height: 1.5;
   position: absolute;
   top: 0px;
+}
+.para-resume {
+  font-size: 1.5rem;
+  line-height: 1.5;
   color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /* .resume-para {
   margin-top: ;
@@ -213,7 +243,8 @@ which will be applied if theme is "Light" */
   height: auto;
   background-color: #6bcdeb;
   line-height: 1;
-  /* background-color: var(--bg-color); */
+  /* box-shadow: var(--resume-box-shadow);
+  background: var(--skills-gradient-bg); */
 }
 .skill-container {
   display: flex;
@@ -310,17 +341,54 @@ which will be applied if theme is "Light" */
   color: #000;
   font-size: 2.2rem;
   padding: 0.3rem;
+  cursor: pointer;
 }
 .sun-icon {
   color: #fff;
   font-size: 2.2rem;
   padding: 0.3rem;
+  cursor: pointer;
 }
-.moon-icon:hover {
+/* .moon-icon:hover {
   border-radius: 50%;
-  background-color: rgb(235, 231, 231);
+  background-color: rgb(211, 206, 206);
 }
 .sun-icon:hover {
   border-radius: 50%;
-  background-color: rgb(102, 98, 98);
+  background-color: rgb(110, 110, 110);
+} */
+.footer-section {
+  background-color: var(--bg-color);
+  padding-top: 5px;
+}
+.footer-section .footer p,
+.footer-section .footer i.fa-github {
+  color: var(--text-color);
+}
+
+.footer .link-github {
+  font-size: 1.5rem;
+}
+.footer p {
+  font-size: 1rem;
+}
+.footer-section .footer img {
+  /* color: #000; */
+  background-color: var(--bg-color);
+}
+.download-resume {
+  text-align: center;
+  padding-top: 1px;
+  padding-bottom: 2px;
+  /* background: var(--resume-gradient-bg);
+  box-shadow: var(--resume-box-shadow); */
+  background-color: #71a2b1;
+}
+.download-resume p {
+  font-size: 1.1rem;
+  padding: 10px;
+  margin: 0;
+}
+.download-resume .download-btn {
+  font-size: 1.5rem;
 }

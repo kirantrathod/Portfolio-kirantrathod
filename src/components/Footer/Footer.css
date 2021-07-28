@@ -1,0 +1,14 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+.footer {
+  text-align: center;
+}
+.footer .link-github {
+  padding: 3px 3px 10px 3px;
+  font-size: 1.3rem;
+}
+.footer p {
+  font-size: 0.8rem;
+}
+.red-heart {
+  color: #6c63ff;
+}
