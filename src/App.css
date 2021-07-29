@@ -5,6 +5,8 @@ will be applied if theme is "Dark" */
   --navigation-box-shadow: 0 1px 4px rgb(167 158 158);
   --text-color: #ffffff;
   --footer-section-bg-color: #807d7d;
+  --bg-skill: #5e5d5d;
+  --bg-resume: #696868;
   --skills-gradient-bg: linear-gradient(to bottom, #717272, #7bbcd4, #6bcdeb);
   --resume-gradient-bg: linear-gradient(to top, #717272, #7bbcd4, #6bcdeb);
   --resume-box-shadow: inset 0 1px 4px rgb(146 161 176 / 30%);
@@ -16,6 +18,8 @@ which will be applied if theme is "Light" */
   --bg-color: #fff;
   --text-color: #000;
   --navigation-box-shadow: 0 1px 4px rgb(146 161 176 / 30%);
+  --bg-skill: #efe9f4;
+  --bg-resume: #e1d6ea;
   --skills-gradient-bg: linear-gradient(to bottom, #ffffff, #90ddf5, #6bcdeb);
   --resume-gradient-bg: linear-gradient(to top, #ffffff, #90ddf5, #6bcdeb);
   --resume-box-shadow: inset 0 1px 4px rgb(146 161 176 / 30%);
@@ -93,7 +97,7 @@ which will be applied if theme is "Light" */
   }
   .project-banner .project-banner-container #project-banner-header {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     padding-right: 0.2rem;
   }
   /**/
@@ -104,7 +108,7 @@ which will be applied if theme is "Light" */
   }
   .project-wrapper .project-banner-container #project-banner-header {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
     padding-right: 0.2rem;
   }
   /**/
@@ -134,15 +138,16 @@ which will be applied if theme is "Light" */
   }
   .skill-wrapper .skill-header {
     font-size: 1.3rem;
-    font-weight: 600;
+    font-weight: 500;
+    padding-right: 8px;
     /* color: var(--text-color); */
-    color: #040308;
+    /* color: #040308; */
   }
   .skill-wrapper .skill-label {
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 500;
     /* color: var(--text-color); */
-    color: black;
+    /* color: black; */
   }
   .footer-section .footer img {
     width: 100%;
@@ -160,6 +165,10 @@ which will be applied if theme is "Light" */
   }
   .download-resume .download-btn {
     font-size: 1.4rem;
+  }
+  .intro-header-resume-container {
+    margin-top: 340px;
+    margin-left: 10px;
   }
 }
 /* ipads and tablets */
@@ -254,7 +263,9 @@ which will be applied if theme is "Light" */
 .skill-wrapper {
   width: 100%;
   height: auto;
-  background-color: #6bcdeb;
+  /* background-color: #75ddfa; */
+  background-color: var(--bg-skill);
+  color: var(--text-color);
   line-height: 1;
   /* box-shadow: var(--resume-box-shadow);
   background: var(--skills-gradient-bg); */
@@ -267,20 +278,38 @@ which will be applied if theme is "Light" */
 }
 .skill-header {
   font-size: 1.5rem;
-  font-weight: 600;
-  /* color: var(--text-color); */
-  color: #040308;
+  font-weight: 500;
+  color: var(--text-color);
+  padding-right: 8px;
+  /* color: #040308; */
+}
+.skill-header-container {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.undrawSkill {
+  width: 210px;
+  height: 210px;
+  padding-top: 0.6rem;
 }
 .skill-label {
   font-size: 1.1rem;
-  font-weight: 600;
-  /* color: var(--text-color); */
-  color: black;
+  font-weight: 500;
+  color: var(--text-color);
+  /* color: black; */
 }
 .skill-subpoints {
+  /* display: flex;
+  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  justify-content: space-evenly; */
   padding: 0 0.5rem;
   margin: 0;
-  color: black;
+  color: var(--text-color);
+  /* color: black; */
 }
 /* .project-banner .project-banner-container {
   display: flex;
@@ -313,7 +342,7 @@ which will be applied if theme is "Light" */
 }
 .project-wrapper .project-banner-container #project-banner-header {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-color);
 }
 /**/
@@ -394,8 +423,9 @@ which will be applied if theme is "Light" */
   padding-top: 1px;
   padding-bottom: 2px;
   /* background: var(--resume-gradient-bg);
-  box-shadow: var(--resume-box-shadow); */
-  background-color: #71a2b1;
+  /* box-shadow: var(--resume-box-shadow); */
+  /* background-color: #71a2b1; */
+  background-color: var(--bg-resume);
 }
 .download-resume p {
   font-size: 1.1rem;
@@ -410,4 +440,9 @@ which will be applied if theme is "Light" */
   display: flex;
   align-items: center;
   justify-content: space-around;
+  border-radius: 50%;
+}
+.skill-icons {
+  width: 40px;
+  height: 40px;
 }

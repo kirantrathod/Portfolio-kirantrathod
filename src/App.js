@@ -1,12 +1,18 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { useEffect, useState } from "react";
-import { FaGoogleDrive } from "react-icons/fa";
+import HTML5 from "./assets/skills-icons/html5.svg";
+import CSS3 from "./assets/skills-icons/css3.svg";
+import REACT from "./assets/skills-icons/react.svg";
+import Angular from "./assets/skills-icons/angular.svg";
+import Git from "./assets/skills-icons/git-icon.svg";
+import Java from "./assets/skills-icons/java-4.svg";
 import { GrLinkedin, GrGithub, GrMail } from "react-icons/gr";
 import { FiMoon, FiSun, FiDownload } from "react-icons/fi";
 import Particles from "react-particles-js";
 import "./App.css";
 import ProjectUndraw from "./assets/undraw_Project.svg";
+import SkillsUndraw from "./assets/undraw_skills.svg";
 import Footer from "./components/Footer/Footer";
 import Emoji from "./components/Emojis/Emoji";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
@@ -248,17 +254,28 @@ function App() {
       </section>
       <section className="skill-wrapper" id="skills">
         <div className="skill-container">
-          <h3 className="skill-header">Skills</h3>
+          <div className="skill-header-container">
+            <h3 className="skill-header">Skills</h3>
+            <img
+              className="undrawSkill"
+              src={SkillsUndraw}
+              alt="Project Banner"
+            ></img>
+          </div>
           <p className="skill-subpoints">
-            <label className="skill-label">Languages: &nbsp;&nbsp;</label>HTML5,
-            CSS3, JavaScript, Java,
+            <label className="skill-label">Languages: &nbsp;&nbsp;</label>
+            <img className="skill-icons" src={HTML5} alt="HTML5"></img>
+            <img className="skill-icons" src={CSS3} alt="CSS3"></img>
+            <img className="skill-icons" src={Java} alt="Java"></img>
           </p>
           <br />
           <p className="skill-subpoints">
             <label className="skill-label">
               Frameworks/Others: &nbsp;&nbsp;
             </label>
-            React.js, Angular 11, Spring Boot, Git
+            <img className="skill-icons" src={REACT} alt="React"></img>
+            <img className="skill-icons" src={Angular} alt="Angular"></img>
+            <img className="skill-icons" src={Git} alt="Git"></img>
           </p>
           <br />
         </div>
