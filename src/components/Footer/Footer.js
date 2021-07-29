@@ -9,7 +9,7 @@ function Footer() {
         All credit to akshay saini for this footer. */}
       <p>
         <a className="link-github" href="https://github.com/kirantrathod">
-          <i className="fa fa-github"></i>
+          <i className="fa fa-github github"></i>
         </a>
         <br />
         <small>

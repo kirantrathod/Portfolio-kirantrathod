@@ -6,9 +6,12 @@
   padding: 3px 3px 10px 3px;
   font-size: 1.3rem;
 }
+github {
+  color: #c791f3;
+}
 .footer p {
   font-size: 0.8rem;
 }
 .red-heart {
-  color: #6c63ff;
+  color: #c791f3;
 }

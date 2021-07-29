@@ -1,7 +1,8 @@
 .card-container {
   display: flex;
   flex-direction: column;
-  background-color: #4cc9f0;
+  /* background-color: #4cc9f0; */
+  background-color: #c791f3;
   box-shadow: 0 19px 38px rgb(0 0 0 / 30%), 0 15px 12px rgb(0 0 0 / 30%);
   border-radius: 15px;
   padding: 40px;
@@ -14,12 +15,14 @@
   color: black;
 }
 .card-container .card-description {
-  color: rgb(66, 65, 65);
+  /* color: rgb(66, 65, 65); */
+  color: #333333;
   font-size: 1rem;
 }
 .card-container p.tech-stack {
   margin-top: 0;
-  color: #906ab4;
+  /* color: #906ab4; */
+  color: whitesmoke;
 }
 .btn {
   /* background-color: #413d7e; */
