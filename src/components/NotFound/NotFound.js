@@ -16,8 +16,8 @@ function NotFound() {
       </div>
       <div className="not-found-description-div">
         <p className="not-found-description">
-          Not to worry! Either you can head back to the HomePage or sit here and
-          Stare at Mr. Bean
+          Not to worry! Either you can head back to the <b>HomePage</b> or sit
+          here and <b>stare at Mr.&nbsp;Bean</b>
         </p>
         <br />
         <a href={URL}>Take me back to HomePage</a>
