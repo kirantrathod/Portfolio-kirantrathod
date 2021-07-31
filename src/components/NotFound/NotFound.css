@@ -1,13 +1,21 @@
-.giphy-embed {
-  width: "100%";
-  height: "100%";
-  style: "position:absolute";
-  /* :"0";frameBorder */
-}
-
-.officeJim {
+.not-found {
   width: 100%;
-  height: 0;
-  padding-bottom: 56%;
-  position: relative;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+.not-found-description {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.not-found-header-div {
+  padding-top: 10px;
+}
+.not-found-gif {
+  padding-top: 60px;
 }

@@ -1,57 +1,290 @@
-.Home {
-  background-color: #cdedf6;
-
-  /* position: absolute;
-  z-index: -1; */
+* {
+  box-sizing: border-box;
 }
-.Home .particles-container,
-.Home .particles-container #tsparticles {
+/* List of all variables which 
+will be applied if theme is "Dark" */
+[data-theme="dark"] {
+  --bg-color: #4e4d4d;
+  --navigation-box-shadow: 1px 2px 4px -1px rgba(192, 192, 192, 0.75);
+  --text-color: #ffffff;
+  --footer-section-bg-color: #807d7d;
+  --bg-skill: #5e5d5d;
+  --bg-resume: #696868;
+  --skills-gradient-bg: linear-gradient(to bottom, #717272, #7bbcd4, #6bcdeb);
+  --resume-gradient-bg: linear-gradient(to top, #717272, #7bbcd4, #6bcdeb);
+  --resume-box-shadow: inset 0 1px 4px rgb(146 161 176 / 30%);
+  --resume-bg-color: #71a2b1;
+}
+/* List of all variables 
+which will be applied if theme is "Light" */
+[data-theme="light"] {
+  --bg-color: #fff;
+  --text-color: #000;
+  --navigation-box-shadow: 1px 2px 4px -1px rgba(125, 123, 123, 0.75);
+  --bg-skill: #efe9f4;
+  --bg-resume: #e1d6ea;
+  --skills-gradient-bg: linear-gradient(to bottom, #ffffff, #90ddf5, #6bcdeb);
+  --resume-gradient-bg: linear-gradient(to top, #ffffff, #90ddf5, #6bcdeb);
+  --resume-box-shadow: inset 0 1px 4px rgb(146 161 176 / 30%);
+}
+
+.Home {
+  /* font-family: sans-serif; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  /* overflow-x: hidden; */
+}
+
+/* ===============================Navigation Section starts here======================================== */
+.navigation {
+  /* border-bottom-left-radius: 3rem; */
+  /* background-color: white; */
+  /* position: -webkit-sticky; */
+  position: fixed;
+  /* top: 0; */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  width: 100%;
+  height: 75px;
+  /* margin: auto; */
+  padding: 0.5rem;
+  z-index: 1000;
+  box-shadow: var(--navigation-box-shadow);
+}
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.nav-container .nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  margin: 0;
+  font-size: 1rem;
+  padding: 0.1rem 1.2rem;
+  cursor: pointer;
+}
+.nav-container .active {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.brandname {
+  left: 5px;
+  font-size: 1.2rem;
+  /* color: black; */
+  color: var(--text-color);
+  top: 0.16rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.5rem;
+}
+.brandname .brandname-anchor {
+  /* color: black; */
+  color: var(--text-color);
+  text-decoration: none;
+  /* font-family: "Lato"; */
+  font-weight: 500;
+}
+.darkmode-toggle-Btn {
+  float: right;
+  /* font-size: 1.5rem; */
+  background-color: inherit;
+  border: 0;
+  outline: none;
+  text-decoration: none;
+  padding-right: 1.5rem;
+}
+.moon-icon {
+  color: #000;
+  font-size: 2.2rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+.sun-icon {
+  color: #fff;
+  font-size: 2.2rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+/* .moon-icon:hover {
+  border-radius: 50%;
+  background-color: rgb(211, 206, 206);
+}
+.sun-icon:hover {
+  border-radius: 50%;
+  background-color: rgb(110, 110, 110);
+} */
+/* ===============================Navigation Section Ends here======================================== */
+/* ===============================Intro Section Starts here======================================== */
+.intro-section {
+  width: 100%;
+  height: 800px;
+  /* background-color: rgb(240, 239, 239); */
+  background-color: var(--bg-color);
+}
+.particles-container {
+  padding-top: 75px;
+}
+.particles-container,
+.particles-container #tsparticles {
   position: relative;
-  /* top: 0;
-  left: 0; */
   height: 100%;
   width: 100%;
   text-align: center;
-  /* z-index: 0; */
-}
-
-.intro-section {
-  /* z-index: 10; */
-  /* text-align: center; */
-  width: 100%;
-  height: 700px;
-  background-color: rgb(240, 239, 239);
-  /* padding: 1rem 0; */
 }
 .intro-header {
   font-size: 1.5rem;
-  font-family: "Castoro", serif;
-  margin-top: 230px;
-  padding-left: 30px;
+  margin-top: 250px;
+  padding-left: 85px;
+  line-height: 1.5;
   position: absolute;
   top: 0px;
+  color: var(--text-color);
 }
-.project-banner {
+
+.intro-header-social-media-container {
+  margin-top: 370px;
+  margin-left: 75px;
+  width: 200px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  /* padding: 10px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.intro-header-social-media-container .social-media-icon {
+  /* padding: 5px; */
+  text-decoration: none;
+  color: var(--text-color);
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 1.4rem;
+  border-radius: 30%;
+  padding: 1px;
+}
+/* ===============================Intro Section Ends here======================================== */
+/* ===============================Skills Section starts here======================================== */
+.skill-wrapper {
   width: 100%;
   height: auto;
-  background-color: #b7e5f1;
+  /* background-color: #75ddfa; */
+  background-color: var(--bg-skill);
+  color: var(--text-color);
+  line-height: 1;
+  z-index: 1000;
+  padding-top: 57px;
+  padding-bottom: 30px;
+  /* box-shadow: var(--resume-box-shadow);
+  background: var(--skills-gradient-bg); */
 }
-.project-banner-container {
+.skill-wrapper .skill-header {
+  font-size: 1.3rem;
+  font-weight: 500;
+  padding-right: 8px;
+  /* color: var(--text-color); */
+  /* color: #040308; */
+}
+.skill-wrapper .skill-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  /* color: var(--text-color); */
+  /* color: black; */
+}
+.skill-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.skill-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-color);
+  padding-right: 8px;
+  /* color: #040308; */
+}
+.skill-header-container {
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 5px;
+}
+.undrawSkill {
+  width: 210px;
+  height: 210px;
+  padding-top: 0.6rem;
+}
+.skill-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  /* color: black; */
+}
+.skill-subpoints {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 0.5rem;
+  margin: 10px 0;
+  color: var(--text-color);
+  /* color: black; */
+}
+.skill-icons {
+  width: 45px;
+  height: 45px;
+  margin: 6px;
+}
+/* ===============================Skills Section Ends here======================================== */
+/* ===============================Resume Download Section Starts here============================= */
+.section-download-resume {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--bg-resume);
+}
+.section-download-resume p {
+  font-size: 1.1rem;
+  padding: 12px;
+  margin: 0;
+}
+.section-download-resume .download-btn {
+  font-size: 1.6rem;
+}
+.section-download-resume .resume-anchor {
+  color: var(--text-color);
+}
+/* ===============================Resume Download Section ends here============================= */
+
+/* ===============================Project Section starts here================================== */
+.project-wrapper {
+  /* background-color: grey; */
+  padding-top: 57px;
+}
+.project-wrapper .project-banner-container {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 1rem;
 }
-.project-banner-container .undrawProject {
-  width: 500px;
+.project-wrapper .project-banner-container .undrawProject {
+  width: 380px;
   height: 250px;
+  padding-top: 0.6rem;
 }
-.project-banner-container #project-banner-header {
+.project-wrapper .project-banner-container #project-banner-header {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #6c63ff;
+  font-weight: 500;
+  color: var(--text-color);
 }
-.project-wrapper {
+/**/
+
+.project-inner-wrapper {
   display: flex;
   margin: 0;
   padding: 0;
@@ -71,24 +304,121 @@
   margin-bottom: 0.2rem;
   /* border-radius: 15px; */
 }
+/* ============================Project Section ends here==================== */
+/*============================ Footer starts here======================= */
+.footer-section {
+  background-color: var(--bg-color);
+  padding-top: 5px;
+}
+.footer-section .footer p,
+.footer-section .footer i.fa-github {
+  color: var(--text-color);
+}
+
+.footer .link-github {
+  font-size: 1.5rem;
+}
+.footer p {
+  font-size: 1rem;
+}
+.footer-section .footer img {
+  /* color: #000; */
+  background-color: var(--bg-color);
+}
+/* ===========================Footer ends here=============================== */
+
 /* mobile devices */
 @media only screen and (min-width: 0px) and (max-width: 480px) {
-  .project-banner-container .undrawProject {
-    width: 250px;
-    height: 250px;
+  .navigation {
+    height: 80px;
   }
-  .project-banner-container #project-banner-header {
+  .nav-container .nav-link {
+    padding: 0.519rem 0.5rem;
+    margin: 0;
+  }
+  .particles-container {
+    padding-top: 80px;
+  }
+  .project-banner .project-banner-container img.undrawProject {
+    width: 200px;
+    height: 200px;
+    padding-left: 0.5rem;
+  }
+  .project-banner .project-banner-container #project-banner-header {
     font-size: 1.5rem;
-    font-weight: 600;
+    font-weight: 500;
+    padding-right: 0.2rem;
   }
-
-  .Home .particles-container {
+  /**/
+  .project-wrapper .project-banner-container img.undrawProject {
+    width: 200px;
+    height: 200px;
+    padding-left: 0.5rem;
+  }
+  .project-wrapper .project-banner-container #project-banner-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding-right: 0.2rem;
+  }
+  /**/
+  .intro-section .intro-header {
+    font-size: 1.3rem;
+    padding-left: 30px;
+    line-height: 1.5;
+    position: absolute;
+    top: 0px;
+  }
+  .darkmode-toggle-Btn {
+    padding-right: 0.5rem;
+  }
+  .darkmode-toggle-Btn .moon-icon {
+    font-size: 1rem;
+    font-size: 1.5rem;
+    padding: 0rem;
+  }
+  .darkmode-toggle-Btn .sun-icon {
+    color: #fff;
+    padding: 0rem;
+    font-size: 1.5rem;
+  }
+  .particles-container {
     height: 100%;
     width: 375px;
   }
+
+  .footer-section .footer img {
+    width: 100%;
+  }
+  .footer .link-github {
+    font-size: 1.3rem;
+  }
+  .footer p {
+    font-size: 0.8rem;
+  }
+  .section-download-resume p {
+    font-size: 1rem;
+    padding: 10px;
+    margin: 0;
+  }
+  .section-download-resume .download-btn {
+    font-size: 1.4rem;
+  }
+  .intro-section .intro-header-social-media-container {
+    margin-top: 350px;
+    margin-left: 20px;
+  }
+  /* .intro-section .intro-header-social-media-container .social-media-icons {
+    padding: 2px;
+  } */
 }
 /* ipads and tablets */
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .navigation {
+    border-radius: 0 0 0 2.5rem;
+    width: inherit;
+    height: 3rem;
+    margin: auto;
+  }
   .undraw-profile {
     width: 19rem;
     height: 25rem;
@@ -96,8 +426,32 @@
 }
 /* small screen laptops */
 @media only screen and (min-width: 1025px) and (max-width: 1201px) {
+  .navigation {
+    border-radius: 0 0 0 2.5rem;
+
+    width: inherit;
+    height: 3rem;
+    margin: auto;
+  }
   .undraw-profile {
     width: 19rem;
     height: 25rem;
   }
 }
+
+/* ======================Home.js */
+/*  {
+  background-color: #cdedf6;
+} */
+
+/* .para-resume {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .resume-para {
+  margin-top: ;
+} */

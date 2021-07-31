@@ -1,23 +1,33 @@
 import React from "react";
 // import foot from "../../assets/footer9.png";
 import "./NotFound.css";
-
+import { Helmet } from "react-helmet";
 function NotFound() {
+  let baseURL = window.location.href;
+  let URLArr = baseURL.split("/");
+  let URL = `${URLArr[0]}//${URLArr[2]}`;
   return (
     <div className="not-found">
-      <div className="officeJim">
-        <iframe
-          src="https://giphy.com/embed/8Ag4NDfPcGfs52wGTC"
-          class="giphy-embed"
-          allowFullScreen
-          title="office404"
-        ></iframe>
+      <Helmet>
+        <title>404 Page | Kiran Rathod</title>
+      </Helmet>
+      <div className="not-found-header-div">
+        <h1 className="not-found-header">This Page Doesn't exist</h1>
       </div>
-      <p>
-        <a href="https://giphy.com/gifs/the-office-jim-halpert-us-8Ag4NDfPcGfs52wGTC">
-          via GIPHY
-        </a>
-      </p>
+      <div className="not-found-description-div">
+        <p className="not-found-description">
+          Not to worry! Either you can head back to the HomePage or sit here and
+          Stare at Mr. Bean
+        </p>
+        <br />
+        <a href={URL}>Take me back to HomePage</a>
+      </div>
+      <div className="not-found-gif">
+        <img
+          src="https://media.giphy.com/media/KXlcrakfMPwwU/giphy.gif"
+          alt="Mr Bean"
+        ></img>
+      </div>
     </div>
   );
 }
