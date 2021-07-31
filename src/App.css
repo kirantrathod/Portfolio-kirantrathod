@@ -5,7 +5,7 @@
 will be applied if theme is "Dark" */
 [data-theme="dark"] {
   --bg-color: #4e4d4d;
-  --navigation-box-shadow: 0 1px 4px rgb(167 158 158);
+  --navigation-box-shadow: 1px 2px 4px -1px rgba(192, 192, 192, 0.75);
   --text-color: #ffffff;
   --footer-section-bg-color: #807d7d;
   --bg-skill: #5e5d5d;
@@ -20,7 +20,7 @@ which will be applied if theme is "Light" */
 [data-theme="light"] {
   --bg-color: #fff;
   --text-color: #000;
-  --navigation-box-shadow: 0 1px 4px rgb(146 161 176 / 30%);
+  --navigation-box-shadow: 1px 2px 4px -1px rgba(125, 123, 123, 0.75);
   --bg-skill: #efe9f4;
   --bg-resume: #e1d6ea;
   --skills-gradient-bg: linear-gradient(to bottom, #ffffff, #90ddf5, #6bcdeb);
@@ -120,6 +120,9 @@ which will be applied if theme is "Light" */
   height: 800px;
   /* background-color: rgb(240, 239, 239); */
   background-color: var(--bg-color);
+}
+.particles-container {
+  padding-top: 75px;
 }
 .particles-container,
 .particles-container #tsparticles {
