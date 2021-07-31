@@ -133,8 +133,8 @@ which will be applied if theme is "Light" */
 }
 .intro-header {
   font-size: 1.5rem;
-  margin-top: 230px;
-  padding-left: 40px;
+  margin-top: 250px;
+  padding-left: 85px;
   line-height: 1.5;
   position: absolute;
   top: 0px;
@@ -142,8 +142,8 @@ which will be applied if theme is "Light" */
 }
 
 .intro-header-social-media-container {
-  margin-top: 340px;
-  margin-left: 20px;
+  margin-top: 370px;
+  margin-left: 75px;
   width: 200px;
   height: 50px;
   position: absolute;
@@ -154,11 +154,16 @@ which will be applied if theme is "Light" */
   justify-content: space-around;
 }
 .intro-header-social-media-container .social-media-icon {
-  font-size: 1.5rem;
-  border-radius: 50%;
   /* padding: 5px; */
   text-decoration: none;
   color: var(--text-color);
+}
+.social-icon {
+  width: 30px;
+  height: 30px;
+  font-size: 1.4rem;
+  border-radius: 30%;
+  padding: 1px;
 }
 /* ===============================Intro Section Ends here======================================== */
 /* ===============================Skills Section starts here======================================== */
@@ -331,6 +336,9 @@ which will be applied if theme is "Light" */
     padding: 0.519rem 0.5rem;
     margin: 0;
   }
+  .particles-container {
+    padding-top: 80px;
+  }
   .project-banner .project-banner-container img.undrawProject {
     width: 200px;
     height: 200px;
@@ -396,8 +404,8 @@ which will be applied if theme is "Light" */
     font-size: 1.4rem;
   }
   .intro-section .intro-header-social-media-container {
-    margin-top: 340px;
-    margin-left: 10px;
+    margin-top: 350px;
+    margin-left: 20px;
   }
   /* .intro-section .intro-header-social-media-container .social-media-icons {
     padding: 2px;

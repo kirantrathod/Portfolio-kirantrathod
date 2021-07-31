@@ -94,9 +94,18 @@ function App() {
       <nav className="navigation">
         <div className="brandname">
           <strong>
-            <a className="brandname-anchor" href="#">
+            {/* <a className="brandname-anchor" href="#">
               &lt;kirantrathod/&gt;
-            </a>
+            </a> */}
+            <Link
+              className="brandname-anchor"
+              to="home"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              &lt;kirantrathod/&gt;
+            </Link>
           </strong>
           <button className="darkmode-toggle-Btn" onClick={toggleDarkMode}>
             {darkMode ? (
@@ -208,7 +217,8 @@ function App() {
         </div>
         <div className="intro-header">
           Hi there! <Emoji symbol="👋" label="Hello" />
-          <br /> I am Kiran Rathod
+          <br />
+          I am Kiran Rathod
           <br />I am&nbsp;
           <ReactTypingEffect
             text={["Software Developer @ TCS", "into Web Development"]}
@@ -236,20 +246,20 @@ function App() {
             href="https://www.linkedin.com/in/kirantrathod/"
           >
             {" "}
-            <GrLinkedin></GrLinkedin>
+            <GrLinkedin className="social-icon"></GrLinkedin>
           </a>
           <a
             className="social-media-icon"
             href="https://github.com/kirantrathod"
           >
             {" "}
-            <GrGithub />
+            <GrGithub className="social-icon" />
           </a>
           <a
             className="social-media-icon"
             href="mailto:kirantrathod.in@gmail.com"
           >
-            <GrMail />
+            <GrMail className="social-icon" />
           </a>
         </div>
         {/* <div className="intro-header-resume-container">
