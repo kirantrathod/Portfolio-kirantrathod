@@ -1,22 +1,23 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import React, { useEffect, useState } from "react";
-import HTML5 from "./assets/skills-icons/html5.svg";
-import CSS3 from "./assets/skills-icons/css3.svg";
-import REACT from "./assets/skills-icons/react.svg";
-import Angular from "./assets/skills-icons/angular.svg";
-import Git from "./assets/skills-icons/git-icon.svg";
-import Java from "./assets/skills-icons/java-4.svg";
-import { GrLinkedin, GrGithub, GrMail } from "react-icons/gr";
-import { FiMoon, FiSun, FiDownload } from "react-icons/fi";
+import { FiDownload, FiMoon, FiSun } from "react-icons/fi";
+import { GrGithub, GrLinkedin, GrMail } from "react-icons/gr";
 import Particles from "react-particles-js";
+import { Link } from "react-scroll";
+import ReactTypingEffect from "react-typing-effect";
 import "./App.css";
+import Angular from "./assets/skills-icons/angular.svg";
+import CSS3 from "./assets/skills-icons/css3.svg";
+import Git from "./assets/skills-icons/git-icon.svg";
+import HTML5 from "./assets/skills-icons/html5.svg";
+import Java from "./assets/skills-icons/java-4.svg";
+import REACT from "./assets/skills-icons/react.svg";
 import ProjectUndraw from "./assets/undraw_Project.svg";
 import SkillsUndraw from "./assets/undraw_skills.svg";
-import Footer from "./components/Footer/Footer";
 import Emoji from "./components/Emojis/Emoji";
+import Footer from "./components/Footer/Footer";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
-import ReactTypingEffect from "react-typing-effect";
 function App() {
   //Dark Mode Code
   let storedDarkMode = localStorage.getItem("DARK_MODE");
@@ -87,10 +88,6 @@ function App() {
       techStack: "Java, XML, Firebase",
     },
   ];
-  let hashURL = window.location.hash;
-  let isAtHome = hashURL === "" ? true : false;
-  let isAtProject = hashURL === "#projects" ? true : false;
-  let isAtSkill = hashURL === "#skills" ? true : false;
 
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
@@ -110,28 +107,43 @@ function App() {
           </button>
         </div>
         <div className="nav-container">
-          <a className={isAtHome ? "nav-link nav-active" : "nav-link"} href="#">
+          <Link
+            activeClass="active"
+            className="nav-link"
+            to="home"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
             Home
-          </a>
-          <a
-            className={isAtSkill ? "nav-link nav-active" : "nav-link"}
-            href="#skills"
+          </Link>
+          <Link
+            activeClass="active"
+            className="nav-link"
+            to="skill"
+            spy={true}
+            smooth={true}
+            duration={500}
           >
             Skills
-          </a>
-          <a
-            className={isAtProject ? "nav-link nav-active" : "nav-link"}
-            href="#projects"
+          </Link>
+          <Link
+            activeClass="active"
+            className="nav-link"
+            to="project"
+            spy={true}
+            smooth={true}
+            duration={500}
           >
             Projects
-          </a>
+          </Link>
           <a className="nav-link" href="https://blog.kirantrathod.in/">
             Blogs
           </a>
         </div>
       </nav>
 
-      <section className="intro-section">
+      <section name="home" className="intro-section">
         <div className="particles-container">
           {darkMode && (
             <Particles
@@ -194,7 +206,7 @@ function App() {
             ></Particles>
           )}
         </div>
-        <p className="intro-header">
+        <div className="intro-header">
           Hi there! <Emoji symbol="👋" label="Hello" />
           <br /> I am Kiran Rathod
           <br />I am&nbsp;
@@ -217,8 +229,8 @@ function App() {
             }}
           />
           {/* <br /> */}
-        </p>
-        <div className="intro-header-resume-container">
+        </div>
+        <div className="intro-header-social-media-container">
           <a
             className="social-media-icon"
             href="https://www.linkedin.com/in/kirantrathod/"
@@ -252,7 +264,7 @@ function App() {
           </p>
         </div> */}
       </section>
-      <section className="skill-wrapper" id="skills">
+      <section name="skill" className="skill-wrapper" id="skills">
         <div className="skill-container">
           <div className="skill-header-container">
             <h3 className="skill-header">Skills</h3>
@@ -280,7 +292,7 @@ function App() {
           <br />
         </div>
       </section>
-      <section className="download-resume">
+      <section className="section-download-resume">
         <p>Download My Resume</p>
         <a
           className="resume-anchor"
@@ -289,7 +301,7 @@ function App() {
           <FiDownload className="download-btn"></FiDownload>
         </a>
       </section>
-      <section className="project-wrapper" id="projects">
+      <section name="project" className="project-wrapper" id="projects">
         <div className="project-banner-container">
           <p id="project-banner-header">Projects</p>
           <img
