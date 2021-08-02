@@ -310,7 +310,7 @@ function Home() {
         <p>Download My Resume</p>
         <a
           className="resume-anchor"
-          href="https://drive.google.com/file/d/1uY5zOKkTQEYJIO_Z_YgH-9Fshh3p_meh/view"
+          href="https://drive.google.com/file/d/1WbKk02vJIrV93ai1ouA9UvkJiJ7RIeB_/view?usp=sharing"
         >
           <FiDownload className="download-btn"></FiDownload>
         </a>

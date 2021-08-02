@@ -299,7 +299,7 @@ which will be applied if theme is "Light" */
   grid-gap: 15px;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   /* background-color: #2196f3; */
-  padding: 15px;
+  padding: 16px;
   box-sizing: border-box;
   margin-bottom: 0.2rem;
   /* border-radius: 15px; */
@@ -316,7 +316,7 @@ which will be applied if theme is "Light" */
 }
 
 .footer .link-github {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 .footer p {
   font-size: 1rem;
@@ -324,6 +324,9 @@ which will be applied if theme is "Light" */
 .footer-section .footer img {
   /* color: #000; */
   background-color: var(--bg-color);
+}
+.footer .footer-para {
+  font-size: 1rem;
 }
 /* ===========================Footer ends here=============================== */
 

@@ -17,8 +17,8 @@ function Footer() {
         </small>
         <br />
         No <i className="fa fa-copyright"></i> copyright issues.
-        <br />
-        <small>Feel free to copy. If you need any help, ping me !</small>
+        {/* <br /> */}
+        {/* <small>Feel free to copy. If you need any help, ping me !</small> */}
       </p>
       <img className="footer-image" src={foot} alt="Footer" />
     </div>
