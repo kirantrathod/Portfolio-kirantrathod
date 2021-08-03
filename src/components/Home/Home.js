@@ -19,6 +19,8 @@ import Emoji from "../Emojis/Emoji";
 import Footer from "../Footer/Footer";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { Helmet } from "react-helmet";
+import ScrollToTop from "../Scroll-To-Top/ScrollToTop";
+import ScrollButton from "../Scroll-To-Top/ScrollToTop";
 function Home() {
   //Dark Mode Code
   let storedDarkMode = localStorage.getItem("DARK_MODE");
@@ -346,6 +348,7 @@ function Home() {
         <Footer className="footer"></Footer>
         {/* <NotFound></NotFound> */}
       </section>
+      <ScrollButton className="scroll-to-top"></ScrollButton>
     </div>
   );
 }

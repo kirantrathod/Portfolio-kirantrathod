@@ -3,20 +3,20 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif; */
-  font-family: -apple-system, BlinkMacSystemFont, "Playfair Display",
+  font-family: "Playfair Display", -apple-system, BlinkMacSystemFont,
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 /* font code */
 h1 {
-  font-family: "Playfair Display", serif;
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 24px;
   font-style: normal;
   font-variant: normal;
@@ -24,7 +24,7 @@ h1 {
   line-height: 26.4px;
 }
 h3 {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
@@ -32,7 +32,7 @@ h3 {
   line-height: 15.4px;
 }
 h4 {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 16px;
   font-style: normal;
   font-variant: normal;
@@ -40,7 +40,7 @@ h4 {
   line-height: 15.4px;
 }
 p {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
@@ -48,7 +48,7 @@ p {
   line-height: 20px;
 }
 blockquote {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 21px;
   font-style: normal;
   font-variant: normal;
@@ -56,7 +56,7 @@ blockquote {
   line-height: 30px;
 }
 pre {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 13px;
   font-style: normal;
   font-variant: normal;
@@ -64,7 +64,7 @@ pre {
   line-height: 18.5714px;
 }
 a {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 18px;
   font-style: normal;
   font-variant: normal;
@@ -72,7 +72,7 @@ a {
   line-height: 15px;
 }
 button {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", "Lato" serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;

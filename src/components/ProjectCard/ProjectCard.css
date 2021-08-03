@@ -15,11 +15,11 @@
 }
 .card-container .card-header {
   margin-bottom: 0;
-  color: black;
+  color: #000000;
 }
 .card-container .card-description {
   /* color: rgb(66, 65, 65); */
-  color: #333333;
+  color: #000000;
   font-size: 1rem;
 }
 .card-container p.tech-stack {
