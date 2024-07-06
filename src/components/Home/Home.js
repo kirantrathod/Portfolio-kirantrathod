@@ -227,7 +227,7 @@ function Home() {
           I am Kiran Rathod
           <br />I am&nbsp;
           <ReactTypingEffect
-            text={["Software Developer @ TCS", "into Web Development"]}
+            text={["FullStack Developer @ Accenture", "into Web Development"]}
             cursorRenderer={(cursor) => <>{cursor}</>}
             speed={100}
             eraseSpeed={100}
