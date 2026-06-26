@@ -32,6 +32,7 @@ which will be applied if theme is "Light" */
   /* font-family: sans-serif; */
   background-color: var(--bg-color);
   color: var(--text-color);
+  /* height: 200px; */
   /* overflow-x: hidden; */
 }
 

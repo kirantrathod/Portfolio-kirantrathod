@@ -12,6 +12,7 @@ import CSS3 from "../../assets/skills-icons/css3.svg";
 import Git from "../../assets/skills-icons/git-icon.svg";
 import HTML5 from "../../assets/skills-icons/html5.svg";
 import Java from "../../assets/skills-icons/java-4.svg";
+import TypeScript from "../../assets/skills-icons/typescript.svg"
 import REACT from "../../assets/skills-icons/react.svg";
 import ProjectUndraw from "../../assets/undraw_Project.svg";
 import SkillsUndraw from "../../assets/undraw_skills.svg";
@@ -55,40 +56,13 @@ function Home() {
       techStack: "Java, XML, Firebase",
     },
     {
-      header: "Movies Dekho1",
+      header: "Movies Dekho",
       description:
         "Be_You is a android chat application, which is kind of influenced by existing social networking application",
       viewProjectLink: "https://github.com/kirantrathod/Be_You",
       liveProjectLink: "",
       liveProjectLinkEnabled: false,
       techStack: "Java, REST API, Firebase",
-    },
-    {
-      header: "Movies Dekho2",
-      description:
-        "Be_You is a android chat application, which is kind of influenced by existing social networking application",
-      viewProjectLink: "https://github.com/kirantrathod/Be_You",
-      liveProjectLink: "",
-      liveProjectLinkEnabled: false,
-      techStack: "Java, XML, Firebase",
-    },
-    {
-      header: "Movies Dekho3",
-      description:
-        "Be_You is a android chat application, which is kind of influenced by existing social networking application",
-      viewProjectLink: "https://github.com/kirantrathod/Be_You",
-      liveProjectLink: "",
-      liveProjectLinkEnabled: false,
-      techStack: "Java, XML, Firebase",
-    },
-    {
-      header: "Movies Dekho4",
-      description:
-        "Be_You is a android chat application, which is kind of influenced by existing social networking application",
-      viewProjectLink: "https://github.com/kirantrathod/Be_You",
-      liveProjectLink: "",
-      liveProjectLinkEnabled: false,
-      techStack: "Java, XML, Firebase",
     },
   ];
 
@@ -224,10 +198,10 @@ function Home() {
         <div className="intro-header">
           Hi there! <Emoji symbol="👋" label="Hello" />
           <br />
-          I am Kiran Rathod
-          <br />I am&nbsp;
+          I am Kiran Rathod 
+          <br/>
           <ReactTypingEffect
-            text={["FullStack Developer @ Accenture", "into Web Development"]}
+            text={["Senior Java Full Stack Developer @ LTM"]}
             cursorRenderer={(cursor) => <>{cursor}</>}
             speed={100}
             eraseSpeed={100}
@@ -295,6 +269,7 @@ function Home() {
             <img className="skill-icons" src={HTML5} alt="HTML5"></img>
             <img className="skill-icons" src={CSS3} alt="CSS3"></img>
             <img className="skill-icons" src={Java} alt="Java"></img>
+            <img className="skill-icons" src={TypeScript} alt="TypeScript"></img>
           </p>
           <br />
           <p className="skill-subpoints">
